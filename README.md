@@ -21,9 +21,9 @@ Some assumptions were made in the creation of this program:
 - Supplements and Magazine charge per month. So you pay per month and you get the supplement and magazine for all weeks in that month.
 
 ## Structure/Design
+### Customer
 For the customers, I chose to use inheritance.
 
-### Customer
 As both paying and associate customers share a lot of the same data types and functionality, that being the Name, Email, Supplements they are subscribed to, and both must be used in the emails sent, having a superclass Customer would store those data, and the subclasses AssociateCustomer and PayingCustomer would store those specifics.
 
 For the Supplements stored by a Customer, they are stored by reference, not copied. This way, any changes made to a Supplement, for example a name change or price change, it will be reflected to all references to that Supplement. This way, Customer does not own Supplements, and removing a Supplement from a Customer will not delete that Supplement entirely.
